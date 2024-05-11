@@ -23,8 +23,11 @@ public class ImageManipulatorTest {
 
     @Test
     public void saveImage() throws Exception {
+        File currentDirectory = new File(".");
+        System.out.println(currentDirectory.getAbsolutePath());
+
         // arrange
-        Img start = LoadImage("testresources/testImage.jpg");
+        Img start = LoadImage("testresources\\testImage.jpg");
         Img expected = LoadImage("testresources/testImage.png");
         String savePath = "testresources/savedImage.png";
 
@@ -47,6 +50,7 @@ public class ImageManipulatorTest {
 
         // act
         Img actual = ImageManipulator.ConvertToGrayScale(start);
+        actual.Save("png", "testresources/grayscale-actual.png");
 
         // assert
         assertTrue(CompareImages(expected, actual));
