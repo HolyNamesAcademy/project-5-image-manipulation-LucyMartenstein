@@ -181,8 +181,8 @@ public class ImageManipulator {
          * @throws IOException
          */
     public static Img InstagramFilter(Img image) throws IOException {
-        Img halo = new Img("C:\\Users\\lucym\\IdeaProjects\\project-5-image-manipulation-LucyMartenstein\\resources\\halo.png");
-        Img grain = new Img("C:\\Users\\lucym\\IdeaProjects\\project-5-image-manipulation-LucyMartenstein\\resources\\decorative_grain.png");
+        Img halo = new Img("resources/halo.png");
+        Img grain = new Img("resources/decorative_grain.png");
         double haloHeight = (double)(halo.GetHeight())/ image.GetHeight();
         double haloWidth = (double)(halo.GetWidth())/image.GetWidth();
         double grainHeight = (double)(grain.GetHeight())/ image.GetHeight();
