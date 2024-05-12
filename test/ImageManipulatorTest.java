@@ -27,7 +27,7 @@ public class ImageManipulatorTest {
         System.out.println(currentDirectory.getAbsolutePath());
 
         // arrange
-        Img start = LoadImage("testresources\\testImage.jpg");
+        Img start = LoadImage("testresources/testImage.jpg");
         Img expected = LoadImage("testresources/testImage.png");
         String savePath = "testresources/savedImage.png";
 
