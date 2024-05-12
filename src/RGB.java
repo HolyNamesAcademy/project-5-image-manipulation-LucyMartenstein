@@ -12,8 +12,9 @@ public class RGB {
      * Default constructor, initializes channels to 0 (a black pixel)
      */
     public RGB() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        red = 0;
+        green = 0;
+        blue = 0;
     }
 
     /**
@@ -27,25 +28,35 @@ public class RGB {
      * @param blue blue channel value
      */
     public RGB(int red, int green, int blue) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        if(red < 0)
+            red = 0;
+        if(red > 255)
+            red = 255;
+        this.red = red;
+        if(green < 0)
+            green = 0;
+        if(green > 255)
+            green = 255;
+        this.green = green;
+        if(blue < 0)
+            blue = 0;
+        if(blue > 255)
+            blue = 255;
+        this.blue = blue;
     }
 
     // Getters
 
     public int GetRed() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return this.red;
     }
 
     public int GetGreen() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return this.green;
     }
 
     public int GetBlue() {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        return this.blue;
     }
 
     /*
@@ -55,18 +66,15 @@ public class RGB {
     or channel value > 255 should be handled properly.
      */
     public void SetRed(int red) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        this.red = red;
     }
 
     public void SetGreen(int green) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        this.green = green;
     }
 
     public void SetBlue(int blue) {
-        // Implement this method and remove the line below
-        throw new UnsupportedOperationException();
+        this.blue = blue;
     }
 
     /**

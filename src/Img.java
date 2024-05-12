@@ -88,7 +88,11 @@ public class Img extends JPanel {
      * @throws IOException
      */
     public void Save(String format, String savePath) throws IOException {
-        ImageIO.write(image, format, new File(savePath));
+        boolean success = ImageIO.write(image, format, new File(savePath));
+
+        if (!success) {
+            throw new IOException("Failed to write image to '" + savePath + "' in format '" + format + "'.");
+        }
     }
 
     /**
